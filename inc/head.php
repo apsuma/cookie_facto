@@ -34,12 +34,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <?php if (isset($_SESSION['loginname'])) { ?>
+                        <li>
+                            <a class="btn btn-warning navbar-btn" href="deconnexion.php">Deconnexion</a></li>
+                    <?php } ?>
                     <li><a href="#">Chocolates chips</a></li>
                     <li><a href="#">Nuts</a></li>
                     <li><a href="#">Gluten full</a></li>
-                    <?php if (isset($_SESSION['loginname'])) { ?>
-                    <li><a href="deconnexion.php">Se déconnecter</a></li>
-                    <?php } ?>
+
                     <li>
                         <a href="/cart.php" class="btn btn-warning navbar-btn">
                             <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
