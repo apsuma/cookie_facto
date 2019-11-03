@@ -1,5 +1,12 @@
-<?php require 'inc/data/products.php'; ?>
-<?php require 'inc/head.php'; ?>
+<?php
+session_start();
+if (!isset($_SESSION['loginname'])) {
+    header('Location:login.php');
+}
+require 'inc/data/products.php';
+require 'inc/head.php';
+?>
+
 <section class="cookies container-fluid">
     <div class="row">
         <?php foreach ($catalog as $id => $cookie) { ?>
