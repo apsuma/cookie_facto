@@ -5,6 +5,25 @@ if (!isset($_SESSION['loginname'])) {
 }
 require_once 'inc/data/products.php';
 require_once 'inc/head.php';
+
+if (isset($_GET['add_to_cart'])) {
+    switch ($_GET['add_to_cart']) {
+        case 46:
+            setcookie('46', '1', time() + 2 * 24 * 3600);
+            break;
+        case 36:
+            setcookie('36', '1', time() + 2 * 24 * 3600);
+            break;
+        case 58:
+            setcookie('58', '1', time() + 2 * 24 * 3600);
+            break;
+        case 32:
+            setcookie('32', '1', time() + 2 * 24 * 3600);
+            break;
+    }
+ var_dump($_COOKIE);
+
+}
 ?>
 
 <section class="cookies container-fluid">
