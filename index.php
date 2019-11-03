@@ -3,8 +3,8 @@ session_start();
 if (!isset($_SESSION['loginname'])) {
     header('Location:login.php');
 }
-require 'inc/data/products.php';
-require 'inc/head.php';
+require_once 'inc/data/products.php';
+require_once 'inc/head.php';
 ?>
 
 <section class="cookies container-fluid">
